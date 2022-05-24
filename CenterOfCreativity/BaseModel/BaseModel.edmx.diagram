@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b3f83035937f4d4b9bea2d2023588049" Name="Diagram1">
+        <EntityTypeShape EntityType="CenterOfCreativityModel.Auditory" Width="1.5" PointX="3.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CenterOfCreativityModel.Event" Width="1.5" PointX="3.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="CenterOfCreativityModel.Group" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CenterOfCreativityModel.LoginHistory" Width="1.5" PointX="6" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CenterOfCreativityModel.Member" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CenterOfCreativityModel.Role" Width="1.5" PointX="1.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CenterOfCreativityModel.Schedule" Width="1.5" PointX="6" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CenterOfCreativityModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CenterOfCreativityModel.User" Width="1.5" PointX="3.75" PointY="11.25" IsExpanded="true" />
+        <AssociationConnector Association="CenterOfCreativityModel.FK_Schedule_Auditory" ManuallyRouted="false" />
+        <AssociationConnector Association="CenterOfCreativityModel.FK_Schedule_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="CenterOfCreativityModel.FK_Member_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="CenterOfCreativityModel.FK_Schedule_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="CenterOfCreativityModel.FK_LoginHistory_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CenterOfCreativityModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="CenterOfCreativityModel.FK_Schedule_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
