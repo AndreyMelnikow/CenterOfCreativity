@@ -32,7 +32,7 @@ namespace CenterOfCreativity.Interface
         {
             if (pBOldPass.Password != "" && pBNewPass.Password != "" && pBRePass.Password != "")
             {
-                var user = App.DataContext.User.Find(Util.UserId);
+                var user = App.DataContext.User.Find(Util.CurrentUser.Id);
                 string pass = user.Password;
                 if (pBOldPass.Password == pass && pBNewPass.Password == pBRePass.Password)
                 {

@@ -64,7 +64,7 @@ namespace CenterOfCreativity.Interface.AdminPages
                 {
                     foreach (var user in usersForRemoving)
                     {
-                        if (user.Login == Util.UserLogin)
+                        if (user.Login == Util.CurrentUser.Login)
                         {
                             MessageBox.Show("Нельзя удалить пользователя под которым вы находитесь!", "Удаление", 
                                 MessageBoxButton.OK, MessageBoxImage.Information);

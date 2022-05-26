@@ -16,12 +16,23 @@
 
         <DataGrid Name="dGridSchedule" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Группа" Binding="{Binding Group.Name}" Width="100*" />
-                <DataGridTextColumn Header="Мероприятие" Binding="{Binding Event.Name}" Width="100*" />
+                <DataGridTextColumn Header="Группа" Binding="{Binding Group.Name}" Width="100*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Мероприятие" Binding="{Binding Event.Name}" Width="100*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
                 <DataGridTextColumn Header="Дата" Binding="{Binding Date, StringFormat=dd.MM.yyyy}" Width="100*" />
                 <DataGridTextColumn Header="Время" Binding="{Binding StartEndTime}" Width="100*" />
                 <DataGridTextColumn Header="Аудитория" Binding="{Binding Auditory.Name}" Width="100*" />
-                <DataGridTextColumn Header="Преподаватель" Binding="{Binding User.FullName}" Width="100*" />
             </DataGrid.Columns>
         </DataGrid>
 

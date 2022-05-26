@@ -28,10 +28,10 @@
                 <ItemsPanelTemplate>
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="40" />
-                            <RowDefinition Height="40" />
-                            <RowDefinition Height="40" />
-                            <RowDefinition Height="40" />
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="60" />
                             <RowDefinition Height="60" />
                             <RowDefinition Height="40" />
                             <RowDefinition Height="35*" />
@@ -41,20 +41,23 @@
                     </Grid>
                 </ItemsPanelTemplate>
             </Menu.ItemsPanel>
-            <MenuItem Header="Пользователи" Visibility="Collapsed" Name="mItemUsers" Click="menuItemUsers_Click" />
-            <MenuItem Header="История" Grid.Row="1" Visibility="Collapsed" Name="mItemHistory" Click="menuItemHistory_Click" />
-            <MenuItem Header="Группы" Grid.Row="2" Visibility="Collapsed" Name="mItemGroupsAdmin" Click="menuItemGroupsAdmin_Click" />
-            <MenuItem Header="Мероприятия" Grid.Row="3" Visibility="Collapsed" Name="mItemEventAdmin" Click="menuItemEventAdmin_Click" />
+            <MenuItem Header="Пользователи" Visibility="Collapsed" Name="mItemUsers" Click="mItemUsers_Click" />
+            <MenuItem Header="История" Grid.Row="1" Visibility="Collapsed" Name="mItemHistory" Click="mItemHistory_Click" />
+            <MenuItem Header="Группы" Grid.Row="2" Visibility="Collapsed" Name="mItemGroupsAdmin" Click="mItemGroupsAdmin_Click" />
+            <MenuItem Header="Мероприятия" Grid.Row="3" Visibility="Collapsed" Name="mItemEventAdmin" Click="mItemEventAdmin_Click" />
 
-            <MenuItem Header="Посетители" Visibility="Collapsed" Name="mItemVisitors" Click="menuItemVisitors_Click" />
-            <MenuItem Header="Расписание" Grid.Row="1" Visibility="Collapsed" Name="mItemSchedule" Click="menuItemSchedule_Click" />
-            <MenuItem Header="Группы" Grid.Row="2" Visibility="Collapsed" Name="mItemGroupsManager" Click="menuItemGroupsManager_Click" />
-            <MenuItem Header="Мероприятия" Grid.Row="3" Visibility="Collapsed" Name="mItemEventManager" Click="menuItemEventManager_Click" />
+            <MenuItem Header="Посетители" Visibility="Collapsed" Name="mItemVisitors" Click="mItemVisitors_Click" />
+            <MenuItem Header="Расписание" Grid.Row="1" Visibility="Collapsed" Name="mItemSchedule" Click="mItemSchedule_Click" />
+            <MenuItem Header="Группы" Grid.Row="2" Visibility="Collapsed" Name="mItemGroupsManager" Click="mItemGroupsManager_Click" />
+            <MenuItem Header="Мероприятия" Grid.Row="3" Visibility="Collapsed" Name="mItemEventManager" Click="mItemEventManager_Click" />
+            
+            <MenuItem Header="Расписание" Name="mItemScheduleTeacher" Click="mItemScheduleTeacher_Click" />
+            <MenuItem Header="Сменить&#10;пароль" Grid.Row="1" Name="mItemChangePassTeacher" Click="mItemChangePass_Click" />
 
-            <MenuItem Header="Сменить&#10;пароль" Grid.Row="4" Name="menuItemChangePass" Click="menuItemChangePass_Click" />
+            <MenuItem Header="Сменить&#10;пароль" Grid.Row="4" Name="mItemChangePass" Click="mItemChangePass_Click" />
 
-            <MenuItem Header="Выход" Grid.Row="7" Name="menuItemExit" Click="menuItemExit_Click" />
-            <MenuItem Header="Завершение&#10;работы" Grid.Row="8" Name="menuItemClose" Click="menuItemClose_Click"  />
+            <MenuItem Header="Выход" Grid.Row="7" Name="menuItemExit" Click="mItemExit_Click" />
+            <MenuItem Header="Завершение&#10;работы" Grid.Row="8" Name="menuItemClose" Click="mItemClose_Click"  />
         </Menu>
 
         <Frame Name="baseFrame" NavigationUIVisibility="Hidden" Focusable="False" ContentRendered="baseFrame_ContentRendered" Grid.Row="1" />

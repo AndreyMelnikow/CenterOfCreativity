@@ -44,10 +44,7 @@ namespace CenterOfCreativity.Interface
                     var list = App.DataContext.User.Where(p => p.Login == tBLogin.Text).ToList();
                     if (list.Count != 0 && (pBPassword.Password == list[0].Password || tBShowPass.Text == list[0].Password))
                     {
-                        Util.UserName = list[0].FullName;
-                        Util.UserRole = list[0].IdRole;
-                        Util.UserLogin = list[0].Login;
-                        Util.UserId = list[0].Id;
+                        Util.CurrentUser = list[0];
 
                         if (list[0].IdRole == 1)
                         {

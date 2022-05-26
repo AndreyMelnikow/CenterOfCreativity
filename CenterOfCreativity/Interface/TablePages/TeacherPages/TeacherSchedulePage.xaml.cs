@@ -36,9 +36,11 @@ namespace CenterOfCreativity.Interface.TablePages.TeacherPages
             {
                 Update();
 
+                DateTime date = DateTime.Now.Date;
+
                 App.DataContext.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
                 dGridSchedule.ItemsSource = App.DataContext.Schedule
-                    .Where(p => p.IdUser == Util.UserId && p.Date >= DateTime.Now).ToList();
+                    .Where(p => p.IdUser == Util.CurrentUser.Id && p.Date >= date).ToList();
 
                 dGridSchedule.Items.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Descending));
             }
@@ -54,6 +56,8 @@ namespace CenterOfCreativity.Interface.TablePages.TeacherPages
             if (cBWeek.SelectedIndex == 0)
             {
                 dGridSchedule.ItemsSource = App.DataContext.Schedule.ToList();
+
+                dGridSchedule.Items.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Ascending));
             }
             else if (cBWeek.SelectedIndex == 1)
             {
@@ -73,7 +77,9 @@ namespace CenterOfCreativity.Interface.TablePages.TeacherPages
 
                 dGridSchedule.ItemsSource = App.DataContext.Schedule.Where
                     (p => p.Date >= startDate && p.Date <= endDate &&
-                    p.User.IdRole == 3 && p.User.IsActive).ToList();
+                    p.User.Id == Util.CurrentUser.Id && p.User.IsActive).ToList();
+
+                dGridSchedule.Items.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Ascending));
             }
             else if (cBWeek.SelectedIndex == 2)
             {
@@ -101,7 +107,9 @@ namespace CenterOfCreativity.Interface.TablePages.TeacherPages
 
                 dGridSchedule.ItemsSource = App.DataContext.Schedule.Where
                     (p => p.Date >= startDate && p.Date <= endDate &&
-                    p.User.IdRole == 3 && p.User.IsActive).ToList();
+                    p.User.Id == Util.CurrentUser.Id && p.User.IsActive).ToList();
+
+                dGridSchedule.Items.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Ascending));
             }
         }
 

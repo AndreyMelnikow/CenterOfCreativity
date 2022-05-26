@@ -155,6 +155,8 @@ namespace CenterOfCreativity.Interface.ManagerPages
             if (cBWeek.SelectedIndex == 0)
             {
                 dGridSchedule.ItemsSource = App.DataContext.Schedule.ToList();
+
+                dGridSchedule.Items.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Ascending));
             }
             else if (cBWeek.SelectedIndex == 1)
             {
@@ -175,6 +177,8 @@ namespace CenterOfCreativity.Interface.ManagerPages
                 dGridSchedule.ItemsSource = App.DataContext.Schedule.Where
                     (p => p.Date >= startDate && p.Date <= endDate &&
                     p.User.IdRole == 3 && p.User.IsActive).ToList();
+
+                dGridSchedule.Items.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Ascending));
             }
             else if (cBWeek.SelectedIndex == 2)
             {
@@ -203,6 +207,8 @@ namespace CenterOfCreativity.Interface.ManagerPages
                 dGridSchedule.ItemsSource = App.DataContext.Schedule.Where
                     (p => p.Date >= startDate && p.Date <= endDate &&
                     p.User.IdRole == 3 && p.User.IsActive).ToList();
+
+                dGridSchedule.Items.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Ascending));
             }
         }
 

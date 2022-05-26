@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CenterOfCreativity.BaseModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,10 +10,7 @@ namespace CenterOfCreativity.Classes
 {
     public static class Util
     {
-        public static string UserName { get; set; }
-        public static string UserLogin { get; set; }
-        public static int UserRole { get; set; }
-        public static int UserId { get; set; }
+        public static User CurrentUser { get; set; }
 
         public static string CurrentPage { get; set; } = "Авторизация";
 
